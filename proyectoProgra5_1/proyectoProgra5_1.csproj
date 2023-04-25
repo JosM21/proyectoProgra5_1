@@ -46,6 +46,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formularios\FrmAgenteGestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmAgenteGestion.Designer.cs">
+      <DependentUpon>FrmAgenteGestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmCitaGestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmCitaGestion.Designer.cs">
+      <DependentUpon>FrmCitaGestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmClienteGestion1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmClienteGestion1.Designer.cs">
+      <DependentUpon>FrmClienteGestion1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmInmuebleGestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmInmuebleGestion.Designer.cs">
+      <DependentUpon>FrmInmuebleGestion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +82,12 @@
     <Compile Include="Formularios\FrmMDI.Designer.cs">
       <DependentUpon>FrmMDI.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\FrmSucursalGestion1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmSucursalGestion1.Designer.cs">
+      <DependentUpon>FrmSucursalGestion1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FrmUsuarioGestion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,11 +97,27 @@
     <Compile Include="Globales.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validaciones.cs" />
+    <EmbeddedResource Include="Formularios\FrmAgenteGestion.resx">
+      <DependentUpon>FrmAgenteGestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmCitaGestion.resx">
+      <DependentUpon>FrmCitaGestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmClienteGestion1.resx">
+      <DependentUpon>FrmClienteGestion1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmInmuebleGestion.resx">
+      <DependentUpon>FrmInmuebleGestion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmMDI.resx">
       <DependentUpon>FrmMDI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmSucursalGestion1.resx">
+      <DependentUpon>FrmSucursalGestion1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmUsuarioGestion.resx">
       <DependentUpon>FrmUsuarioGestion.cs</DependentUpon>

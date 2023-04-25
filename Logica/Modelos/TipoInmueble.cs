@@ -14,18 +14,14 @@ namespace Logica.Modelos
         {
             DataTable R = new DataTable();
 
-            //AQUI VA EL CODIGO FUENTE QUE CARGA LA LISTA
+            Servicios.Conexion MiCnn = new Servicios.Conexion();
+
+            R = MiCnn.EjecutarSELECT("SPTipoInmuebleListar");
 
             return R;
         }
             
         
-       
-
-
-
-
-
 
     }
 }

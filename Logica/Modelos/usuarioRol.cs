@@ -1,4 +1,5 @@
 ﻿
+using FluentAssertions.Common;
 using System.Data;
 
 
@@ -15,7 +16,9 @@ namespace Logica.Modelos
         { 
             DataTable R = new DataTable();
 
-            //AQUI VA EL CODIGO FUENTE QUE CARGA LA LISTA
+            Servicios.Conexion MiCnn = new Servicios.Conexion();
+
+            R = MiCnn.EjecutarSELECT("SPUsuarioRolListar");
 
             return R;
         }

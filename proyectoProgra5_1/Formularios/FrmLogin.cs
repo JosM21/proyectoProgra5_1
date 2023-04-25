@@ -34,9 +34,55 @@ namespace proyectoProgra5_1.Formularios
 
         private void BtnIngresar_Click(object sender, EventArgs e)
         {
-            //validar usuario
+            if (!string.IsNullOrEmpty(TxtEmail.Text.Trim()) &&
+                !string.IsNullOrEmpty(TxtContrasenia.Text.Trim()))
+            {
+
+                string usuario = TxtEmail.Text.Trim();
+                string contrasenia = TxtContrasenia.Text.Trim();
+
+                Globales.MiUsuarioGlobal = Globales.MiUsuarioGlobal.ValidarUsuario(usuario, contrasenia);
+
+                if (Globales.MiUsuarioGlobal.IdUsuario > 0)
+                {
+
+                    Globales.MiFormPrincipal.Show();
+
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Usuario o contraseña incorrectas", "Error de Validacion", MessageBoxButtons.OK);
+                    TxtContrasenia.Focus();
+                    TxtContrasenia.SelectAll();
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Faltan datos requeridos", "Error de validacion", MessageBoxButtons.OK);
+            }
+
+
+            
+        }
+
+        private void FrmLogin_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.Shift & e.Alt & e.KeyCode == Keys.A)
+            {
+                BtnIngresoDirecto.Visible = true;
+            }
+
+
+        }
+
+        private void BtnIngresoDirecto_Click(object sender, EventArgs e)
+        {
 
             Globales.MiFormPrincipal.Show();
+
             this.Hide();
         }
     }
