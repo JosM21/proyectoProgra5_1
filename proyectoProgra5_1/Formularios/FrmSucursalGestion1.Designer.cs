@@ -51,6 +51,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.TxtBuscar = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DgLista)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -323,12 +325,36 @@
             this.label13.TabIndex = 0;
             this.label13.Text = "Codigo:";
             // 
+            // TxtBuscar
+            // 
+            this.TxtBuscar.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.TxtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtBuscar.ForeColor = System.Drawing.Color.DeepPink;
+            this.TxtBuscar.Location = new System.Drawing.Point(158, 521);
+            this.TxtBuscar.Name = "TxtBuscar";
+            this.TxtBuscar.Size = new System.Drawing.Size(739, 30);
+            this.TxtBuscar.TabIndex = 58;
+            this.TxtBuscar.TextChanged += new System.EventHandler(this.TxtBuscar_TextChanged_1);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DeepPink;
+            this.label1.Location = new System.Drawing.Point(54, 524);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(79, 25);
+            this.label1.TabIndex = 59;
+            this.label1.Text = "Buscar:";
+            // 
             // FrmSucursalGestion1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Pink;
-            this.ClientSize = new System.Drawing.Size(946, 538);
+            this.ClientSize = new System.Drawing.Size(946, 582);
+            this.Controls.Add(this.TxtBuscar);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.DgLista);
             this.Controls.Add(this.BtnCancelar);
             this.Controls.Add(this.BtnLimpiar);
@@ -337,12 +363,13 @@
             this.Controls.Add(this.groupBox2);
             this.Name = "FrmSucursalGestion1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmSecursalGestion";
+            this.Text = "Mantenimiento de Sucursal";
             this.Load += new System.EventHandler(this.FrmSucursalGestion1_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.DgLista)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -368,5 +395,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox TxtBuscar;
+        private System.Windows.Forms.Label label1;
     }
 }

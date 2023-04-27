@@ -19,6 +19,7 @@ namespace proyectoProgra5_1.Formularios
 
         public DataTable ListarCita { get; set; }
 
+        DataTable DtLista { get; set; }
 
         public FrmCitaGestion()
         {
@@ -325,6 +326,27 @@ namespace proyectoProgra5_1.Formularios
         private void TxtInmueble_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = Validaciones.CaracteresTexto(e, true);
+        }
+
+        private void LLenarLista()
+        {
+            DtLista = new DataTable();
+
+            DtLista = MiCitaLocal.Listar(TxtBuscar.Text.Trim());
+
+            DgLista.DataSource = DtLista;
+
+        }
+
+
+        private void TxtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            if (TxtBuscar.Text.Count() > 2 || string.IsNullOrEmpty(TxtBuscar.Text.Trim()))
+            {
+
+                LLenarLista();
+
+            }
         }
     }
 

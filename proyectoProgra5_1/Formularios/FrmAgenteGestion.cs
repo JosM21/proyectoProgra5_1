@@ -58,7 +58,7 @@ namespace proyectoProgra5_1.Formularios
             }
             else
             {
-                ListarAgentes = MiAgenteLocal.ListarInactivos();
+                ListarAgentes = MiAgenteLocal.ListarInactivos(FiltroBusqueda);
             }
 
             DgLista.DataSource = ListarAgentes;

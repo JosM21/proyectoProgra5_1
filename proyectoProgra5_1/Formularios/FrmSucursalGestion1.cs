@@ -13,7 +13,7 @@ namespace proyectoProgra5_1.Formularios
     public partial class FrmSucursalGestion1 : Form
     {
 
-
+        DataTable DtLista { get; set; }
         private Logica.Modelos.Sucursal1 MiSucursalLocal { get; set; }
 
         private DataTable ListarSucursal { get; set; }
@@ -339,9 +339,27 @@ namespace proyectoProgra5_1.Formularios
             e.Handled = Validaciones.CaracteresTexto(e, true);
         }
 
-        private void TxtBuscar_TextChanged(object sender, EventArgs e)
+
+        private void LLenarLista()
         {
-            CargarListaSucursal();
+            DtLista = new DataTable();
+
+            DtLista = MiSucursalLocal.ListarSucursal( TxtBuscar.Text.Trim());
+
+            DgLista.DataSource = DtLista;
+
+        }
+
+        private void TxtBuscar_TextChanged_1(object sender, EventArgs e)
+        {
+
+            if (TxtBuscar.Text.Count() > 2 || string.IsNullOrEmpty(TxtBuscar.Text.Trim()))
+            {
+
+                LLenarLista();
+
+            }
+
         }
     }
 

@@ -24,13 +24,14 @@ namespace Logica.Modelos
         public string Direccion { get; set; }
 
 
-        public DataTable ListarSucursal()
+        public DataTable ListarSucursal(string FiltroBusqueda = "")
         {
             DataTable R = new DataTable();
             Conexion MiCnn = new Conexion();
 
+            MiCnn.ListaDeParametros.Add(new SqlParameter("@FiltroBusqueda", FiltroBusqueda));
 
- 
+
             R = MiCnn.EjecutarSELECT("SPSucursalListar");
 
             return R;

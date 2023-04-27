@@ -111,25 +111,15 @@ namespace Logica.Modelos
         }
 
 
-        public bool ConsultarFecha()
-        {
-            bool R = false;
-
-            return R;
-        }
-
-        public bool ConsultarHora()
-        {
-            bool R = false;
-
-            return R;
-        }
-
-        public DataTable Listar()
+        public DataTable Listar( string FiltroBusqueda = "")
         {
             DataTable R = new DataTable();
 
             Conexion MiCnn = new Conexion();
+
+
+           
+            MiCnn.ListaDeParametros.Add(new SqlParameter("@FiltroBusqueda", FiltroBusqueda));
 
 
             R = MiCnn.EjecutarSELECT("SPCitaListar");

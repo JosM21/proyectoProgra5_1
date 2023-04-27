@@ -55,7 +55,7 @@ namespace proyectoProgra5_1.Formularios
             }
             else
             {
-                ListarUsuario = MiUsuarioLocal.ListarInactivos();
+                ListarUsuario = MiUsuarioLocal.ListarInactivos(FiltroBusqueda);
             }
 
             DgLista.DataSource = ListarUsuario;

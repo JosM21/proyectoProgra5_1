@@ -51,7 +51,7 @@ namespace proyectoProgra5_1.Formularios
             }
             else
             {
-                ListarCliente1 = MiClienteLocal1.ListarInactivos();
+                ListarCliente1 = MiClienteLocal1.ListarInactivos(FiltroBusqueda);
             }
 
             DgLista.DataSource = ListarCliente1;
