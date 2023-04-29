@@ -506,6 +506,11 @@ namespace proyectoProgra5_1.Formularios
                 BtnEliminar.Text = "Activar";
             }
         }
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.Cancel;
+        }
     }
 
 }

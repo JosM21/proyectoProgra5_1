@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.BtnLimpiar = new System.Windows.Forms.Button();
             this.BtnEliminar = new System.Windows.Forms.Button();
@@ -57,15 +57,15 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.DgLista = new System.Windows.Forms.DataGridView();
+            this.CboxVerActivos = new System.Windows.Forms.CheckBox();
+            this.TxtBuscar = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.CidInmueble = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CnumeroLote = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cprecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cdescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cnombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ctelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CboxVerActivos = new System.Windows.Forms.CheckBox();
-            this.TxtBuscar = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgLista)).BeginInit();
             this.SuspendLayout();
@@ -82,6 +82,7 @@
             this.BtnCancelar.TabIndex = 24;
             this.BtnCancelar.Text = "Cancelar";
             this.BtnCancelar.UseVisualStyleBackColor = false;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // BtnLimpiar
             // 
@@ -370,14 +371,14 @@
             this.DgLista.AllowUserToDeleteRows = false;
             this.DgLista.AllowUserToOrderColumns = true;
             this.DgLista.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LavenderBlush;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DeepPink;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Pink;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.InfoText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgLista.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LavenderBlush;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.DeepPink;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Pink;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.InfoText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgLista.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.DgLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgLista.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CidInmueble,
@@ -386,14 +387,14 @@
             this.Cdescripcion,
             this.Cnombre,
             this.Ctelefono});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DeepPink;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Violet;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgLista.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.DeepPink;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Violet;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgLista.DefaultCellStyle = dataGridViewCellStyle4;
             this.DgLista.Location = new System.Drawing.Point(57, 352);
             this.DgLista.MultiSelect = false;
             this.DgLista.Name = "DgLista";
@@ -409,65 +410,6 @@
             this.DgLista.TabIndex = 18;
             this.DgLista.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgLista_CellClick);
             this.DgLista.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.DgLista_DataBindingComplete);
-            // 
-            // CidInmueble
-            // 
-            this.CidInmueble.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.CidInmueble.DataPropertyName = "idInmueble";
-            this.CidInmueble.HeaderText = "Codigo";
-            this.CidInmueble.MinimumWidth = 6;
-            this.CidInmueble.Name = "CidInmueble";
-            this.CidInmueble.ReadOnly = true;
-            this.CidInmueble.Width = 125;
-            // 
-            // CnumeroLote
-            // 
-            this.CnumeroLote.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.CnumeroLote.DataPropertyName = "numeroLote";
-            this.CnumeroLote.HeaderText = "# Lote";
-            this.CnumeroLote.MinimumWidth = 6;
-            this.CnumeroLote.Name = "CnumeroLote";
-            this.CnumeroLote.ReadOnly = true;
-            this.CnumeroLote.Width = 125;
-            // 
-            // Cprecio
-            // 
-            this.Cprecio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Cprecio.DataPropertyName = "precio";
-            this.Cprecio.HeaderText = "Precio";
-            this.Cprecio.MinimumWidth = 6;
-            this.Cprecio.Name = "Cprecio";
-            this.Cprecio.ReadOnly = true;
-            this.Cprecio.Width = 150;
-            // 
-            // Cdescripcion
-            // 
-            this.Cdescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Cdescripcion.DataPropertyName = "descripcion";
-            this.Cdescripcion.HeaderText = "Tipo";
-            this.Cdescripcion.MinimumWidth = 6;
-            this.Cdescripcion.Name = "Cdescripcion";
-            this.Cdescripcion.ReadOnly = true;
-            this.Cdescripcion.Width = 125;
-            // 
-            // Cnombre
-            // 
-            this.Cnombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Cnombre.DataPropertyName = "nombre";
-            this.Cnombre.HeaderText = "Dueño";
-            this.Cnombre.MinimumWidth = 6;
-            this.Cnombre.Name = "Cnombre";
-            this.Cnombre.ReadOnly = true;
-            // 
-            // Ctelefono
-            // 
-            this.Ctelefono.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Ctelefono.DataPropertyName = "telefono";
-            this.Ctelefono.HeaderText = "Telefono";
-            this.Ctelefono.MinimumWidth = 6;
-            this.Ctelefono.Name = "Ctelefono";
-            this.Ctelefono.ReadOnly = true;
-            this.Ctelefono.Width = 125;
             // 
             // CboxVerActivos
             // 
@@ -503,6 +445,63 @@
             this.label1.Size = new System.Drawing.Size(73, 25);
             this.label1.TabIndex = 15;
             this.label1.Text = "Buscar";
+            // 
+            // CidInmueble
+            // 
+            this.CidInmueble.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.CidInmueble.DataPropertyName = "idInmueble";
+            this.CidInmueble.HeaderText = "Codigo";
+            this.CidInmueble.MinimumWidth = 6;
+            this.CidInmueble.Name = "CidInmueble";
+            this.CidInmueble.ReadOnly = true;
+            // 
+            // CnumeroLote
+            // 
+            this.CnumeroLote.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.CnumeroLote.DataPropertyName = "numeroLote";
+            this.CnumeroLote.HeaderText = "# Lote";
+            this.CnumeroLote.MinimumWidth = 6;
+            this.CnumeroLote.Name = "CnumeroLote";
+            this.CnumeroLote.ReadOnly = true;
+            // 
+            // Cprecio
+            // 
+            this.Cprecio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Cprecio.DataPropertyName = "precio";
+            this.Cprecio.HeaderText = "Precio";
+            this.Cprecio.MinimumWidth = 6;
+            this.Cprecio.Name = "Cprecio";
+            this.Cprecio.ReadOnly = true;
+            this.Cprecio.Width = 125;
+            // 
+            // Cdescripcion
+            // 
+            this.Cdescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Cdescripcion.DataPropertyName = "descripcion";
+            this.Cdescripcion.HeaderText = "Tipo";
+            this.Cdescripcion.MinimumWidth = 6;
+            this.Cdescripcion.Name = "Cdescripcion";
+            this.Cdescripcion.ReadOnly = true;
+            this.Cdescripcion.Width = 125;
+            // 
+            // Cnombre
+            // 
+            this.Cnombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Cnombre.DataPropertyName = "nombre";
+            this.Cnombre.HeaderText = "Dueño";
+            this.Cnombre.MinimumWidth = 6;
+            this.Cnombre.Name = "Cnombre";
+            this.Cnombre.ReadOnly = true;
+            // 
+            // Ctelefono
+            // 
+            this.Ctelefono.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Ctelefono.DataPropertyName = "telefono";
+            this.Ctelefono.HeaderText = "Telefono";
+            this.Ctelefono.MinimumWidth = 6;
+            this.Ctelefono.Name = "Ctelefono";
+            this.Ctelefono.ReadOnly = true;
+            this.Ctelefono.Width = 125;
             // 
             // FrmInmuebleGestion
             // 

@@ -417,5 +417,10 @@ namespace proyectoProgra5_1.Formularios
         {
             CargarListaCliente();
         }
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.Cancel;
+        }
     }
 }

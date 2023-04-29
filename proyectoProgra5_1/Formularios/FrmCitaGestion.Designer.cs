@@ -31,12 +31,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DgLista = new System.Windows.Forms.DataGridView();
-            this.CidCita = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cfecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Chora = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cagente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ccliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cinmueble = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.BtnLimpiar = new System.Windows.Forms.Button();
             this.BtnModificar = new System.Windows.Forms.Button();
@@ -56,6 +50,12 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.TxtBuscar = new System.Windows.Forms.TextBox();
+            this.CidCita = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cfecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Chora = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cagente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ccliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cinmueble = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DgLista)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -106,63 +106,6 @@
             this.DgLista.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgLista_CellClick);
             this.DgLista.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.DgLista_DataBindingComplete);
             // 
-            // CidCita
-            // 
-            this.CidCita.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.CidCita.DataPropertyName = "idCita";
-            this.CidCita.HeaderText = "Codigo";
-            this.CidCita.MinimumWidth = 6;
-            this.CidCita.Name = "CidCita";
-            this.CidCita.ReadOnly = true;
-            this.CidCita.Width = 125;
-            // 
-            // Cfecha
-            // 
-            this.Cfecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Cfecha.DataPropertyName = "fecha";
-            this.Cfecha.HeaderText = "Fecha";
-            this.Cfecha.MinimumWidth = 6;
-            this.Cfecha.Name = "Cfecha";
-            this.Cfecha.ReadOnly = true;
-            this.Cfecha.Width = 125;
-            // 
-            // Chora
-            // 
-            this.Chora.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Chora.DataPropertyName = "hora";
-            this.Chora.HeaderText = "Hora";
-            this.Chora.MinimumWidth = 6;
-            this.Chora.Name = "Chora";
-            this.Chora.ReadOnly = true;
-            this.Chora.Width = 125;
-            // 
-            // Cagente
-            // 
-            this.Cagente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Cagente.DataPropertyName = "nombre";
-            this.Cagente.HeaderText = "Agente";
-            this.Cagente.MinimumWidth = 6;
-            this.Cagente.Name = "Cagente";
-            this.Cagente.ReadOnly = true;
-            // 
-            // Ccliente
-            // 
-            this.Ccliente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Ccliente.DataPropertyName = "nombreCliente";
-            this.Ccliente.HeaderText = "Cliente";
-            this.Ccliente.MinimumWidth = 6;
-            this.Ccliente.Name = "Ccliente";
-            this.Ccliente.ReadOnly = true;
-            // 
-            // Cinmueble
-            // 
-            this.Cinmueble.DataPropertyName = "numeroLote";
-            this.Cinmueble.HeaderText = "Inmueble";
-            this.Cinmueble.MinimumWidth = 6;
-            this.Cinmueble.Name = "Cinmueble";
-            this.Cinmueble.ReadOnly = true;
-            this.Cinmueble.Width = 125;
-            // 
             // BtnCancelar
             // 
             this.BtnCancelar.BackColor = System.Drawing.Color.Salmon;
@@ -175,6 +118,7 @@
             this.BtnCancelar.TabIndex = 39;
             this.BtnCancelar.Text = "Cancelar";
             this.BtnCancelar.UseVisualStyleBackColor = false;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // BtnLimpiar
             // 
@@ -377,6 +321,60 @@
             this.TxtBuscar.TabIndex = 19;
             this.TxtBuscar.TextChanged += new System.EventHandler(this.TxtBuscar_TextChanged);
             // 
+            // CidCita
+            // 
+            this.CidCita.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.CidCita.DataPropertyName = "idCita";
+            this.CidCita.HeaderText = "Codigo";
+            this.CidCita.MinimumWidth = 6;
+            this.CidCita.Name = "CidCita";
+            this.CidCita.ReadOnly = true;
+            // 
+            // Cfecha
+            // 
+            this.Cfecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Cfecha.DataPropertyName = "fecha";
+            this.Cfecha.HeaderText = "Fecha";
+            this.Cfecha.MinimumWidth = 6;
+            this.Cfecha.Name = "Cfecha";
+            this.Cfecha.ReadOnly = true;
+            // 
+            // Chora
+            // 
+            this.Chora.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Chora.DataPropertyName = "hora";
+            this.Chora.HeaderText = "Hora";
+            this.Chora.MinimumWidth = 6;
+            this.Chora.Name = "Chora";
+            this.Chora.ReadOnly = true;
+            // 
+            // Cagente
+            // 
+            this.Cagente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Cagente.DataPropertyName = "nombre";
+            this.Cagente.HeaderText = "Agente";
+            this.Cagente.MinimumWidth = 6;
+            this.Cagente.Name = "Cagente";
+            this.Cagente.ReadOnly = true;
+            // 
+            // Ccliente
+            // 
+            this.Ccliente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Ccliente.DataPropertyName = "nombreCliente";
+            this.Ccliente.HeaderText = "Cliente";
+            this.Ccliente.MinimumWidth = 6;
+            this.Ccliente.Name = "Ccliente";
+            this.Ccliente.ReadOnly = true;
+            // 
+            // Cinmueble
+            // 
+            this.Cinmueble.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Cinmueble.DataPropertyName = "numeroLote";
+            this.Cinmueble.HeaderText = "Numero Lote";
+            this.Cinmueble.MinimumWidth = 6;
+            this.Cinmueble.Name = "Cinmueble";
+            this.Cinmueble.ReadOnly = true;
+            // 
             // FrmCitaGestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -423,13 +421,13 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox TxtBuscar;
         private System.Windows.Forms.DataGridViewTextBoxColumn CidCita;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cfecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Chora;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cagente;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ccliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cinmueble;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox TxtBuscar;
     }
 }

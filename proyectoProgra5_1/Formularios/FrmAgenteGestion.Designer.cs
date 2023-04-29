@@ -28,18 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.CboxVerActivos = new System.Windows.Forms.CheckBox();
             this.TxtBuscar = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.DgLista = new System.Windows.Forms.DataGridView();
-            this.CidAgente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cnombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ccedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cemail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ctelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CNombreSucursal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.BtnLimpiar = new System.Windows.Forms.Button();
             this.BtnEliminar = new System.Windows.Forms.Button();
@@ -60,6 +54,12 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.CidAgente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cnombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ccedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cemail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ctelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CNombreSucursal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DgLista)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -106,14 +106,14 @@
             this.DgLista.AllowUserToDeleteRows = false;
             this.DgLista.AllowUserToOrderColumns = true;
             this.DgLista.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgLista.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgLista.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.DgLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgLista.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CidAgente,
@@ -122,14 +122,14 @@
             this.Cemail,
             this.Ctelefono,
             this.CNombreSucursal});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DarkMagenta;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Violet;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.LavenderBlush;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgLista.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.DarkMagenta;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Violet;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.LavenderBlush;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgLista.DefaultCellStyle = dataGridViewCellStyle4;
             this.DgLista.Location = new System.Drawing.Point(59, 304);
             this.DgLista.MultiSelect = false;
             this.DgLista.Name = "DgLista";
@@ -146,63 +146,6 @@
             this.DgLista.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgLista_CellClick);
             this.DgLista.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.DgLista_DataBindingComplete);
             // 
-            // CidAgente
-            // 
-            this.CidAgente.DataPropertyName = "idAgente";
-            this.CidAgente.HeaderText = "Codigo";
-            this.CidAgente.MinimumWidth = 6;
-            this.CidAgente.Name = "CidAgente";
-            this.CidAgente.ReadOnly = true;
-            this.CidAgente.Width = 125;
-            // 
-            // Cnombre
-            // 
-            this.Cnombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Cnombre.DataPropertyName = "nombre";
-            this.Cnombre.HeaderText = "Nombre";
-            this.Cnombre.MinimumWidth = 6;
-            this.Cnombre.Name = "Cnombre";
-            this.Cnombre.ReadOnly = true;
-            // 
-            // Ccedula
-            // 
-            this.Ccedula.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Ccedula.DataPropertyName = "cedula";
-            this.Ccedula.HeaderText = "Cedula";
-            this.Ccedula.MinimumWidth = 6;
-            this.Ccedula.Name = "Ccedula";
-            this.Ccedula.ReadOnly = true;
-            this.Ccedula.Width = 125;
-            // 
-            // Cemail
-            // 
-            this.Cemail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Cemail.DataPropertyName = "email";
-            this.Cemail.HeaderText = "Email";
-            this.Cemail.MinimumWidth = 6;
-            this.Cemail.Name = "Cemail";
-            this.Cemail.ReadOnly = true;
-            this.Cemail.Width = 125;
-            // 
-            // Ctelefono
-            // 
-            this.Ctelefono.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Ctelefono.DataPropertyName = "telefono";
-            this.Ctelefono.HeaderText = "Telefono";
-            this.Ctelefono.MinimumWidth = 6;
-            this.Ctelefono.Name = "Ctelefono";
-            this.Ctelefono.ReadOnly = true;
-            this.Ctelefono.Width = 125;
-            // 
-            // CNombreSucursal
-            // 
-            this.CNombreSucursal.DataPropertyName = "nombreSucursal";
-            this.CNombreSucursal.HeaderText = "Sucursal";
-            this.CNombreSucursal.MinimumWidth = 6;
-            this.CNombreSucursal.Name = "CNombreSucursal";
-            this.CNombreSucursal.ReadOnly = true;
-            this.CNombreSucursal.Width = 125;
-            // 
             // BtnCancelar
             // 
             this.BtnCancelar.BackColor = System.Drawing.Color.Salmon;
@@ -215,6 +158,7 @@
             this.BtnCancelar.TabIndex = 29;
             this.BtnCancelar.Text = "Cancelar";
             this.BtnCancelar.UseVisualStyleBackColor = false;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // BtnLimpiar
             // 
@@ -432,6 +376,60 @@
             this.label13.Size = new System.Drawing.Size(81, 25);
             this.label13.TabIndex = 0;
             this.label13.Text = "Codigo:";
+            // 
+            // CidAgente
+            // 
+            this.CidAgente.DataPropertyName = "idAgente";
+            this.CidAgente.HeaderText = "Codigo";
+            this.CidAgente.MinimumWidth = 6;
+            this.CidAgente.Name = "CidAgente";
+            this.CidAgente.ReadOnly = true;
+            // 
+            // Cnombre
+            // 
+            this.Cnombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Cnombre.DataPropertyName = "nombre";
+            this.Cnombre.HeaderText = "Nombre";
+            this.Cnombre.MinimumWidth = 6;
+            this.Cnombre.Name = "Cnombre";
+            this.Cnombre.ReadOnly = true;
+            // 
+            // Ccedula
+            // 
+            this.Ccedula.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Ccedula.DataPropertyName = "cedula";
+            this.Ccedula.HeaderText = "Cedula";
+            this.Ccedula.MinimumWidth = 6;
+            this.Ccedula.Name = "Ccedula";
+            this.Ccedula.ReadOnly = true;
+            // 
+            // Cemail
+            // 
+            this.Cemail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Cemail.DataPropertyName = "email";
+            this.Cemail.HeaderText = "Email";
+            this.Cemail.MinimumWidth = 6;
+            this.Cemail.Name = "Cemail";
+            this.Cemail.ReadOnly = true;
+            this.Cemail.Width = 125;
+            // 
+            // Ctelefono
+            // 
+            this.Ctelefono.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Ctelefono.DataPropertyName = "telefono";
+            this.Ctelefono.HeaderText = "Telefono";
+            this.Ctelefono.MinimumWidth = 6;
+            this.Ctelefono.Name = "Ctelefono";
+            this.Ctelefono.ReadOnly = true;
+            this.Ctelefono.Width = 125;
+            // 
+            // CNombreSucursal
+            // 
+            this.CNombreSucursal.DataPropertyName = "nombreSucursal";
+            this.CNombreSucursal.HeaderText = "Sucursal";
+            this.CNombreSucursal.MinimumWidth = 6;
+            this.CNombreSucursal.Name = "CNombreSucursal";
+            this.CNombreSucursal.ReadOnly = true;
             // 
             // FrmAgenteGestion
             // 
